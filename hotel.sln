@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hotel", "the_third\hotel.csproj", "{3D071819-513B-4627-94A9-4D2331918BCC}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{66E09850-2D59-40C8-9F91-81509083CF30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D071819-513B-4627-94A9-4D2331918BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D071819-513B-4627-94A9-4D2331918BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D071819-513B-4627-94A9-4D2331918BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D071819-513B-4627-94A9-4D2331918BCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E09850-2D59-40C8-9F91-81509083CF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E09850-2D59-40C8-9F91-81509083CF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E09850-2D59-40C8-9F91-81509083CF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E09850-2D59-40C8-9F91-81509083CF30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {729FDA8D-7D2A-46A8-96E2-D88F67B61782}
+	EndGlobalSection
+EndGlobal
