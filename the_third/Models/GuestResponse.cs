@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace the_third
+namespace the_third.Models
 {
     public class GuestResponse
     {

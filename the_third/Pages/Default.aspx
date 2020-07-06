@@ -6,8 +6,8 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="./style.css" rel="stylesheet"/>
-    <script src="./script.js"></script>
+    <link href="../Content/style.css" rel="stylesheet"/>
+    <script src="../Content/script.js"></script>
 </head>
 <body>
     <header>

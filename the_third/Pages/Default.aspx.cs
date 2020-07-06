@@ -1,24 +1,43 @@
 ﻿using System;
 using System.Text;
 using System.Web.ModelBinding;
+using the_third.Models;
+using the_third.Models.Repository;
+using the_third.Presenters.Results;
+using the_third.Presenters;
 namespace the_third
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        [Ninject.Inject]
         Hotel hotel;
+        public IPresenter<GuestResponse> Presenter { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             SetHotel();
+            //if (IsPostBack)
+            //{
+            //    GuestResponse rsvp = new GuestResponse();
+            //    if (TryUpdateModel(rsvp, new FormValueProvider(ModelBindingExecutionContext)))
+            //    {
+            //        ResponseRepository.GetRepository().AddResponse(rsvp);
+            //        if(rsvp.ChosenRoomNumber!=null&&rsvp.FIO!=null&&rsvp.PhoneNumber!=null)
+            //        {
+            //            hotel.SetRoomAvailability(rsvp.ChosenRoomNumber, false);
+            //            Response.Redirect("ok.html");
+            //        }
+            //    }
+            //}
+            Presenter = new RSVPPresenter { repository = new ResponseRepository() };
             if (IsPostBack)
             {
-                GuestResponse rsvp = new GuestResponse();
+                GuestResponse rsvp = ((DataResult<GuestResponse>)Presenter.GetResult()).DataItem;
                 if (TryUpdateModel(rsvp, new FormValueProvider(ModelBindingExecutionContext)))
                 {
-                    ResponseRepository.GetRepository().AddResponse(rsvp);
-                    if(rsvp.ChosenRoomNumber!=null&&rsvp.FIO!=null&&rsvp.PhoneNumber!=null)
+                    if(((SuccessResult)Presenter.GetResult(rsvp)).Flag)
                     {
                         hotel.SetRoomAvailability(rsvp.ChosenRoomNumber, false);
-                        Response.Redirect("ok.html");
+                        Response.Redirect("../Content/ok.html");
                     }
                 }
             }

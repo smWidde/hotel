@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
+using the_third.Models;
+using the_third.Models.Repository;
 namespace the_third
 {
     public partial class WebForm2 : System.Web.UI.Page
