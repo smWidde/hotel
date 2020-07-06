@@ -96,6 +96,7 @@
     <Compile Include="App_Start\DIconfiguration.cs" />
     <Compile Include="App_Start\NinjectWeb.cs" />
     <Compile Include="Models\Repository\IRepository.cs" />
+    <Compile Include="Models\Validators\GuestValidator.cs" />
     <Compile Include="obj\Release\net45\NuGet\C2BCC551415FC0CF557304FB71F1DCCF64D0EE64\Ninject.Web.Common.WebHost\3.3.2\App_Start\NinjectWebCommon.cs" />
     <Compile Include="Pages\Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>

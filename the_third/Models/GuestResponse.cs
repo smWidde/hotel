@@ -5,10 +5,10 @@ namespace the_third.Models
     public class GuestResponse
     {
         [Required]
-        [RegularExpression(@"[А-Я]{1}[а-я]+", ErrorMessage="Имя, да так чтоб православно")]
+        [CustomValidation(typeof(the_third.Models.Validators.GuestValidator), "CheckFIO")]
         public string FIO { get; set; }
         [Required]
-        [RegularExpression(@"[0-9]{5}-[0-9]{3}(-[0-9]{2}){2}", ErrorMessage = "Номер, да так чтоб только числа и православно")]
+        [CustomValidation(typeof(the_third.Models.Validators.GuestValidator), "CheckPhoneNumber")]
         public string PhoneNumber { get; set; }
         public string ChosenRoomNumber { get; set; }
     }
